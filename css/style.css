@@ -21,10 +21,10 @@
   --color-site-2: #f5f4fa;
   --color-site-3: #eee;
   --color-site-gray-1: #ececec;
-  --color-site-gray-2: #AFB1B8;
+  --color-site-gray-2: #afb1b8;
   /*fill icons*/
 
-  --color-btn-active: #188CE8;
+  --color-btn-active: #188ce8;
 
   --container-width: 1200px;
   --container-padding-h: 15px;
@@ -156,8 +156,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-    gap: 10px;
-  }
+  gap: 10px;
+}
 
 .social-item {
   width: var(--diametr-social-link);
@@ -170,7 +170,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-width: 100%;
+
+  width: 100%;
   height: 100%;
 
   border-radius: inherit;
@@ -222,7 +223,7 @@ width: 100%;
 
 .header-list {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -249,13 +250,15 @@ width: 100%;
 
 .header-link-contacts {
   color: var(--color-font-2);
-  fill: var(--color-font-2);
   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
+.header-icon {
+  fill: currentColor;
+}
 /*=====  End of Header  ======*/
 
 /*=============================================
@@ -316,7 +319,11 @@ width: 100%;
 
 .footer-social-link {
   background-color: var(--color-white-opacity-1);
-  fill: var(--color-white);
+  color: var(--color-white);
+}
+
+.footer-social-icon {
+  fill: currentColor;
 }
 
 .footer-social-link:hover,
@@ -333,18 +340,18 @@ width: 100%;
 /*----------  Hero section  ----------*/
 
 .section-hero {
-  background-color: var(--color-site-1);
-  padding: 0;
-}
-
-.hero-wrap {
   max-width: 1600px;
   min-height: 600px;
 
   margin: auto;
+  padding: 200px 0;
 
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/home/hero-bg.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/home/hero-bg.jpg);
+  background-color: var(--color-site-1);
 }
 
 .hero {
@@ -353,11 +360,10 @@ width: 100%;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-
-  padding: 200px 237px;
 }
 
 .page-title {
+  max-width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -366,8 +372,6 @@ width: 100%;
   text-align: center;
 
   color: var(--color-font-3-c);
-
-  margin-bottom: ;
 }
 
 /*----------  Features section  ----------*/
@@ -377,7 +381,11 @@ width: 100%;
 }
 
 .feature-icon {
-  padding: 25px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 120px;
   margin-bottom: 30px;
 
   border-radius: 4px;
@@ -420,7 +428,8 @@ width: 100%;
   --items: 4;
 
   background-color: var(--color-white);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 
   border-radius: 0 0 4px 4px;
 }
@@ -448,13 +457,17 @@ width: 100%;
 }
 
 .team-social-link {
-  fill: var(--color-site-gray-2);
+  color: var(--color-site-gray-2);
+}
+
+.team-social-icon {
+  fill: currentColor;
 }
 
 .team-social-link:hover,
-.team-social-link:focus {
+.team-social-link:focus{
   background-color: var(--color-brand-1);
-  fill: var(--color-white);
+  color: var(--color-white);
 }
 
 /* .team-social-link:hover .team-social-icon { */
@@ -474,18 +487,19 @@ width: 100%;
   border: 1px solid var(--color-site-gray-2);
   border-radius: 4px;
 
-  fill: var(--color-site-gray-2);
+  color: var(--color-site-gray-2);
 }
 
-/* .clients-icon {
-  fill: var(--color-site-gray-2);
+.clients-icon {
+  fill: currentColor;
 }
 
-*/ .clients-link:hover,
+
+.clients-link:hover,
 .clients-link:focus {
   border-color: var(--color-brand-1);
 
-  fill: var(--color-brand-1);
+  color: var(--color-brand-1);
 }
 
 /*=====  End of Main  ======*/
@@ -507,13 +521,15 @@ width: 100%;
 }
 
 .portfolio-link {
-  display: inline-block;
+  display: block;
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .btn-filter {
   font-weight: 500;
   font-size: 16px;
@@ -533,6 +549,8 @@ width: 100%;
 .btn-filter:hover {
   background-color: var(--color-brand-1);
   color: var(--color-font-3-c);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-text {
